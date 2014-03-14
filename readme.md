@@ -23,7 +23,7 @@ Use pip to install this utility to your python site-packages.  This will allow y
     # Use Helper function
     ###
 
-    # Send Email to some addresses
+    # Set logfile and log some sample message types
     ArcPyLogger.setupLogging(log_file)
 
     logging.info(message)
