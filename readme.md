@@ -1,5 +1,8 @@
 # ArcPy Logger #
-A python module for adding writing log messages to the ArcPy messaging interface.  Super useful for ArcGIS Server GP Services
+ArcPyLogger is a python module that attaches the ArcPy messaging interface to the standard python logging module. 
+This gives us the ability to concurrently write a single log message to the ArcGIS for Desktop/Server Console, 
+a Log File, and to the Command Line Console. ArcPyLogger makes the development of Python projects more uniform by 
+standardizing a single method for communicating back to the client.
 
 ## Install ##
 
@@ -18,6 +21,19 @@ Use pip to install this utility to your python site-packages.  This will allow y
     log_file = r'example_log_file.txt'
 
 ### Use Helper Function ###
+
+    ###
+    # Use Helper function
+    ###
+
+    # Set logfile and log some sample message types
+    ArcPyLogger.setupLogging()
+
+    logging.info(message)
+    logging.warning(warning)
+    logging.error(error)
+    
+### Use Helper Function with Log File ###
 
     ###
     # Use Helper function
