@@ -40,6 +40,3 @@ Use pip to install this utility to your python site-packages.  This will allow y
             return
 
     rootLogger.addHandler(ArcPyLogger.ArcpyMessageHandler())
-
-
-#TODO: Document everything!
