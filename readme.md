@@ -1,11 +1,11 @@
 # ArcPy Logger #
-ArcPyLogger is a python module that attaches the ArcPy messaging interface to the standard python logging module. 
+ArcPy Logger is a python module that attaches the ArcPy messaging interface to the standard python logging module. 
 
 By default ArcPy does not follow the Python standard for writing messages to the logging interface. This module extends
 the existing python logging interface with the ability to write messages to the ArcGIS Desktop or ArcGIS Server
 console. In addition, a helper function is included to write messages concurrently to a File and ArcGIS Consoles.
 
-ArcPyLogger will make the development of ArcPy Python projects more standards compliant by standardizing on 
+ArcPy Logger will make the development of ArcPy Python projects more standards compliant by standardizing on 
 a single method for communicating back to the client.
 
 ## Install ##
@@ -24,7 +24,7 @@ If you do not have Pip, you can install this package using the standard python p
 
 ### Initialize ##
     import logging
-    import ArcPyLogger
+    import arcpylogger
 
     message = 'Example Message'
     warning = 'Example Warning'
@@ -39,7 +39,7 @@ If you do not have Pip, you can install this package using the standard python p
     ###
 
     # Set logfile and log some sample message types
-    ArcPyLogger.setupLogging()
+    arcpylogger.setupLogging()
 
     logging.info(message)
     logging.warning(warning)
@@ -52,7 +52,7 @@ If you do not have Pip, you can install this package using the standard python p
     ###
 
     # Set logfile and log some sample message types
-    ArcPyLogger.setupLogging(log_file)
+    arcpylogger.setupLogging(log_file)
 
     logging.info(message)
     logging.warning(warning)
@@ -64,7 +64,7 @@ If you do not have Pip, you can install this package using the standard python p
     # Check if there's already an ArcpyMessageHandler
     rootLogger = logging.getLogger()
     for h in rootLogger.handlers:
-        if isinstance(h, ArcPyLogger.ArcpyMessageHandler):
+        if isinstance(h, arcpylogger.ArcpyMessageHandler):
             return
 
-    rootLogger.addHandler(ArcPyLogger.ArcpyMessageHandler())
+    rootLogger.addHandler(arcpylogger.ArcpyMessageHandler())
