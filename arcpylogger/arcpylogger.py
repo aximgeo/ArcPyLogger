@@ -3,12 +3,6 @@ Title: ArcPy Logger
 Description: Classes to define ArcPy message stream handlers!
 Usage:
 """
-__author__ = 'Charles Arnold (carnold@gisinc.com) and Christopher Fricke (cfricke@gisinc.com)'
-__version__ = '0.9.0'
-__status__ = 'Development'
-__copyright__ = 'Copyright 2015, GISi'
-__license__ = 'MIT'
-
 
 import logging
 import logging.handlers
@@ -67,6 +61,7 @@ class ArcpyMessageStream(object):
 
 
 class ArcpyMessageHandler(logging.StreamHandler):
+    
     def __init__(self, encoding=None):
         """
         :param encoding:
