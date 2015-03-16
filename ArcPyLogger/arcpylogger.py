@@ -1,13 +1,13 @@
-"""
+__doc__ = """
 Title: ArcPy Logger
 Description: Classes to define ArcPy message stream handlers!
 Usage:
 """
-
-__author__ = 'carnold'
-__version__ = '0.9'
-__maintainer__ = 'carnold'
+__author__ = 'Charles Arnold (carnold@gisinc.com) and Christopher Fricke (cfricke@gisinc.com)'
+__version__ = '0.9.0'
 __status__ = 'Development'
+__copyright__ = 'Copyright 2015, GISi'
+__license__ = 'MIT'
 
 
 import logging
@@ -29,26 +29,32 @@ reload(logging.handlers)
 
 
 class ArcpyMessageStream(object):
-    '''
+    """
     A class that looks like a stream (i.e., has a 'write' method and an 'encoding' property)
     for use with the logging.StreamHandler class.
     Anything passed to 'write' is forward to arcpy.Add[Message|Warning|Error], based on the
     last call to setWriteLevel (default is ArcpyMessageStream.MESSAGE)
-    '''
+    """
 
     MESSAGE = 0
     WARNING = 1
     ERROR = 2
 
     def __init__(self, encoding):
+        """
+
+        :param encoding:
+        :return:
+        """
         self.encoding = encoding
         self.setWriteLevel(ArcpyMessageStream.MESSAGE)
 
     def setWriteLevel(self, level):
-        '''
+        """
         Set what arcpy.*Message function should be called on ArcpyMessageStream.write
-        @param level: ArcpyMessageStream.MESSAGE, ArcpyMessageStream.WARNING or ArcpyMessageStream.ERROR
-        '''
+
+        :param level: ArcpyMessageStream.MESSAGE, ArcpyMessageStream.WARNING or ArcpyMessageStream.ERROR
+        """
 
         if level == ArcpyMessageStream.MESSAGE:
             self.write = lambda m: arcpy.AddMessage(m.strip())
@@ -61,13 +67,19 @@ class ArcpyMessageStream(object):
 
 
 class ArcpyMessageHandler(logging.StreamHandler):
-
     def __init__(self, encoding=None):
+        """
+        :param encoding:
+        :return:
+        """
         super(ArcpyMessageHandler, self).__init__(ArcpyMessageStream(encoding))
 
     def emit(self, record):
-
-        # set the write level on the ArcpyMessageStream before emitting the message ..
+        """
+        set the write level on the ArcpyMessageStream before emitting the message ..
+        :param record:
+        :return:
+        """
         if record.levelno >= logging.ERROR:
             self.stream.setWriteLevel(ArcpyMessageStream.ERROR)
         elif record.levelno >= logging.WARNING:

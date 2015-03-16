@@ -1,13 +1,14 @@
-"""
+__doc__ = """
 Title: ArcPy Logging Helper
 Description: A helper function to setup the ArcPy logging on the logging root.
 Usage:
 """
 
-__author__ = 'cfricke'
-__version__ = '0.9'
-__maintainer__ = 'cfricke'
+__author__ = 'Christopher Fricke (cfricke@gisinc.com) and Charles Arnold (carnold@gisinc.com)'
+__version__ = '0.9.0'
 __status__ = 'Development'
+__copyright__ = 'Copyright 2015, GISi'
+__license__ = 'MIT'
 
 
 import logging
@@ -33,12 +34,12 @@ def setupLogging(log_file=None, level=logging.DEBUG):
             logging.basicConfig(level=level)
 
         # Check if there's already an ArcpyMessageHandler
-        rootLogger = logging.getLogger()
-        for h in rootLogger.handlers:
+        root_logger = logging.getLogger()
+        for h in root_logger.handlers:
             if isinstance(h, ArcpyMessageHandler):
                 return
 
-        rootLogger.addHandler(ArcpyMessageHandler())
+        root_logger.addHandler(ArcpyMessageHandler())
 
     except IOError:
         raise IOError('Unable to write log file to {0}'.format(log_file))
