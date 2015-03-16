@@ -1,16 +1,28 @@
 # ArcPy Logger #
 ArcPyLogger is a python module that attaches the ArcPy messaging interface to the standard python logging module. 
-This gives us the ability to concurrently write a single log message to the ArcGIS for Desktop/Server Console, 
-a Log File, and to the Command Line Console. ArcPyLogger makes the development of Python projects more uniform by 
-standardizing a single method for communicating back to the client.
+
+By default ArcPy does not follow the Python standard for writing messages to the logging interface. This module extends
+the existing python logging interface with the ability to write messages to the ArcGIS Desktop or ArcGIS Server
+console. In addition, a helper function is included to write messages concurrently to a File and ArcGIS Consoles.
+
+ArcPyLogger will make the development of ArcPy Python projects more standards compliant by standardizing on 
+a single method for communicating back to the client.
 
 ## Install ##
 
 Use pip to install this utility to your python site-packages.  This will allow you to use it throughout projects!
 
     pip install git+ssh://git@git.gisinc.com:7999/pyt/arcpylogger.git
+    
+If you do not have Pip, you can install this package using the standard python packaging system.
 
-## Initialize ##
+    git clone git+ssh://git@git.gisinc.com:7999/pyt/arcpylogger.git
+    cd arcpylogger
+    python setup.py install
+
+## Usage ##
+
+### Initialize ##
     import logging
     import ArcPyLogger
 
