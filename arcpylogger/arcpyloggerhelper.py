@@ -5,8 +5,8 @@ Usage:
 """
 
 __author__ = 'Christopher Fricke (cfricke@gisinc.com) and Charles Arnold (carnold@gisinc.com)'
-__version__ = '0.9.0'
-__status__ = 'Development'
+__version__ = '1.0.0'
+__status__ = 'Production'
 __copyright__ = 'Copyright 2015, GISi'
 __license__ = 'MIT'
 
