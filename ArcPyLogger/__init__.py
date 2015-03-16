@@ -11,4 +11,4 @@ __status__ = 'Development'
 
 from arcpylogger import ArcpyMessageStream
 from arcpylogger import ArcpyMessageHandler
-from arcpyloggerhelper import setupLogging
+from arcpyloggerhelper import setup_logging

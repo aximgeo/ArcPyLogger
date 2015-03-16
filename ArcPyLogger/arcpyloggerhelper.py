@@ -16,7 +16,7 @@ import logging
 from arcpylogger import ArcpyMessageHandler
 
 
-def setupLogging(log_file=None, level=logging.DEBUG):
+def setup_logging(log_file=None, level=logging.DEBUG):
     """ Add an ArcpyMessageHandler to the root logger
         :param log_file: Log file location to write messages.  If none, then don't write to log file
         :type log_file: str
