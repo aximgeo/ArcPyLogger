@@ -1,10 +1,10 @@
 from distutils.core import setup
 
 setup(
-    name='ArcPy Logger',
+    name='arcpylogger',
     version='1.0.0',
     packages=['arcpylogger'],
-    url='https://git.gisinc.com/projects/GITHUB/repos/arcpylogger',
+    url='https://github.com/gisinc/ArcPyLogger',
     license='MIT',
     author='cfricke, carnold',
     author_email='cfricke@gisinc.com, carnold@gisinc.com',
