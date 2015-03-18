@@ -12,7 +12,7 @@ a single method for communicating back to the client.
 
 Use pip to install this utility to your python site-packages.  This will allow you to use it throughout projects!
 
-    pip install git+ssh:/git@github.com:gisinc/ArcPyLogger.git
+    pip install arcpylogger
     
 If you do not have Pip, you can install this package using the standard python packaging system.
 
