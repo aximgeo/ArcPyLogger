@@ -12,11 +12,11 @@ a single method for communicating back to the client.
 
 Use pip to install this utility to your python site-packages.  This will allow you to use it throughout projects!
 
-    pip install git+ssh://git@git.gisinc.com:7999/pyt/arcpylogger.git
+    pip install git+ssh:/git@github.com:gisinc/ArcPyLogger.git
     
 If you do not have Pip, you can install this package using the standard python packaging system.
 
-    git clone git+ssh://git@git.gisinc.com:7999/pyt/arcpylogger.git
+    git clone git+ssh://git@github.com:gisinc/ArcPyLogger.git
     cd arcpylogger
     python setup.py install
 
