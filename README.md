@@ -16,7 +16,7 @@ Use pip to install this utility to your python site-packages.  This will allow y
     
 If you do not have Pip, you can install this package using the standard python packaging system.
 
-    git clone git+ssh://git@github.com:gisinc/ArcPyLogger.git
+    git clone https://github.com/bmoregeo/ArcPyLogger.git
     cd arcpylogger
     python setup.py install
 
