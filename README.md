@@ -68,5 +68,3 @@ If you do not have Pip, you can install this package using the standard python p
             break
         else:
              rootLogger.addHandler(arcpylogger.ArcpyMessageHandler())
-
-    rootLogger.addHandler(arcpylogger.ArcpyMessageHandler())
