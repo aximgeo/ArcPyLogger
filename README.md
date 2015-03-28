@@ -66,5 +66,5 @@ If you do not have Pip, you can install this package using the standard python p
     for h in rootLogger.handlers:
         if isinstance(h, arcpylogger.ArcpyMessageHandler):
             break
-        else:
-             rootLogger.addHandler(arcpylogger.ArcpyMessageHandler())
+    else:
+        rootLogger.addHandler(arcpylogger.ArcpyMessageHandler())
