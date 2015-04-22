@@ -39,7 +39,7 @@ If you do not have Pip, you can install this package using the standard python p
     ###
 
     # Set logfile and log some sample message types
-    arcpylogger.setupLogging()
+    arcpylogger.setup_logging()
 
     logging.info(message)
     logging.warning(warning)
@@ -52,7 +52,7 @@ If you do not have Pip, you can install this package using the standard python p
     ###
 
     # Set logfile and log some sample message types
-    arcpylogger.setupLogging(log_file)
+    arcpylogger.setup_logging(log_file)
 
     logging.info(message)
     logging.warning(warning)
