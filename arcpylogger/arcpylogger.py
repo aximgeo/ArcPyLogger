@@ -9,18 +9,6 @@ import logging.handlers
 
 import arcpy
 
-# ESRI's broken reload()-on-run scheme requires us to reload() here ..
-# If we don't we'll see strange errors caused by ArcpyMessageHandler.__init__
-#  being called with a version of the base class that is not the same as the
-#  one required ..
-#  Basically, because it will automatically reload() modules
-#  that we import directly (such as logging), in certain cases we'll run
-#  into conflicts between the previously imported types and the reloaded
-#  types.
-
-reload(logging)
-reload(logging.handlers)
-
 
 class ArcpyMessageStream(object):
     """
