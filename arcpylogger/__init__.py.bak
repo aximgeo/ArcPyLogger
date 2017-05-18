@@ -4,6 +4,6 @@ Description: Classes to define ArcPy message stream handlers and a helper functi
 Usage:
 """
 
-from .arcpylogger import ArcpyMessageStream
-from .arcpylogger import ArcpyMessageHandler
-from .arcpyloggerhelper import setup_logging
+from arcpylogger import ArcpyMessageStream
+from arcpylogger import ArcpyMessageHandler
+from arcpyloggerhelper import setup_logging
