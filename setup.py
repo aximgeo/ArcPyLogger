@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='arcpylogger',
-    version='2.0.0',
+    version='2.1.0',
     packages=['arcpylogger'],
     url='https://github.com/gisinc/ArcPyLogger',
     license='MIT',
