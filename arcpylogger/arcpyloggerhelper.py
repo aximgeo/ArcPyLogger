@@ -6,7 +6,7 @@ Usage:
 
 import logging
 
-from arcpylogger import ArcpyMessageHandler
+from .arcpylogger import ArcpyMessageHandler
 
 
 def setup_logging(log_file=None, level=logging.DEBUG):
