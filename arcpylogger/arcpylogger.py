@@ -14,7 +14,7 @@ class ArcpyMessageStream(object):
     """
     A class that looks like a stream (i.e., has a 'write' method and an 'encoding' property)
     for use with the logging.StreamHandler class.
-    Anything passed to 'write' is forward to arcpy.Add[Message|Warning|Error], based on the
+    Anything passed to 'write' is forwarded to arcpy.Add[Message|Warning|Error], based on the
     last call to setWriteLevel (default is ArcpyMessageStream.MESSAGE)
     """
 
@@ -49,7 +49,7 @@ class ArcpyMessageStream(object):
 
 
 class ArcpyMessageHandler(logging.StreamHandler):
-    
+
     def __init__(self, encoding=None):
         """
         :param encoding:
